@@ -166,7 +166,7 @@ def find_similar_movies(input_title):
     except Exception as e:
         return None
 
-@app.route('/chat', methods=['POST'])
+@app.route('/series_chatbot', methods=['POST'])
 def chat_endpoint():
     try:
         data = request.json
@@ -222,4 +222,4 @@ def chat_endpoint():
         return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5003, debug=True)
